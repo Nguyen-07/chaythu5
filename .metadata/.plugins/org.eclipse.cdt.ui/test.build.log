@@ -1,0 +1,62 @@
+16:53:14 **** Build of configuration Debug for project test ****
+make -j12 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -I"E:/SDK_1.0.3_NUCLEO-F401RE/shared/Drivers/CMSIS/Include" -I../Inc -I"E:/SDK_1.0.3_NUCLEO-F401RE/shared/Drivers/STM32F401RE_StdPeriph_Driver/inc" -I"E:/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/button" -I"E:/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/buzzer" -I"E:/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/led" -I"E:/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/rtos" -I"E:/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/sensor" -I"E:/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/serial" -I"E:/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/ucglib" -I"E:/SDK_1.0.3_NUCLEO-F401RE/shared/Utilities" -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f401retx.d" -MT"Startup/startup_stm32f401retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f401retx.o" "../Startup/startup_stm32f401retx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -D__FPU_PRESENT=1 -D__NVIC_PRIO_BITS=4 -DSTM32F401xE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -IE:/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/timer -IE:/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/ucglib -IE:/SDK_1.0.3_NUCLEO-F401RE/shared/Drivers/STM32F401RE_StdPeriph_Driver/inc -IE:/SDK_1.0.3_NUCLEO-F401RE/shared/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -D__FPU_PRESENT=1 -D__NVIC_PRIO_BITS=4 -DSTM32F401xE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -IE:/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/timer -IE:/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/ucglib -IE:/SDK_1.0.3_NUCLEO-F401RE/shared/Drivers/STM32F401RE_StdPeriph_Driver/inc -IE:/SDK_1.0.3_NUCLEO-F401RE/shared/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -D__FPU_PRESENT=1 -D__NVIC_PRIO_BITS=4 -DSTM32F401xE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -IE:/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/timer -IE:/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/ucglib -IE:/SDK_1.0.3_NUCLEO-F401RE/shared/Drivers/STM32F401RE_StdPeriph_Driver/inc -IE:/SDK_1.0.3_NUCLEO-F401RE/shared/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+In file included from E:/SDK_1.0.3_NUCLEO-F401RE/shared/Drivers/STM32F401RE_StdPeriph_Driver/inc/stm32f4xx.h:9,
+                 from ../Src/main.c:20:
+E:/SDK_1.0.3_NUCLEO-F401RE/shared/Drivers/CMSIS/Include/core_cm4.h:1547:37: error: unknown type name 'IRQn_Type'; did you mean 'ITM_Type'?
+ 1547 | __STATIC_INLINE void NVIC_EnableIRQ(IRQn_Type IRQn)
+      |                                     ^~~~~~~~~
+      |                                     ITM_Type
+E:/SDK_1.0.3_NUCLEO-F401RE/shared/Drivers/CMSIS/Include/core_cm4.h:1559:38: error: unknown type name 'IRQn_Type'; did you mean 'ITM_Type'?
+ 1559 | __STATIC_INLINE void NVIC_DisableIRQ(IRQn_Type IRQn)
+      |                                      ^~~~~~~~~
+      |                                      ITM_Type
+E:/SDK_1.0.3_NUCLEO-F401RE/shared/Drivers/CMSIS/Include/core_cm4.h:1575:45: error: unknown type name 'IRQn_Type'; did you mean 'ITM_Type'?
+ 1575 | __STATIC_INLINE uint32_t NVIC_GetPendingIRQ(IRQn_Type IRQn)
+      |                                             ^~~~~~~~~
+      |                                             ITM_Type
+E:/SDK_1.0.3_NUCLEO-F401RE/shared/Drivers/CMSIS/Include/core_cm4.h:1587:41: error: unknown type name 'IRQn_Type'; did you mean 'ITM_Type'?
+ 1587 | __STATIC_INLINE void NVIC_SetPendingIRQ(IRQn_Type IRQn)
+      |                                         ^~~~~~~~~
+      |                                         ITM_Type
+E:/SDK_1.0.3_NUCLEO-F401RE/shared/Drivers/CMSIS/Include/core_cm4.h:1599:43: error: unknown type name 'IRQn_Type'; did you mean 'ITM_Type'?
+ 1599 | __STATIC_INLINE void NVIC_ClearPendingIRQ(IRQn_Type IRQn)
+      |                                           ^~~~~~~~~
+      |                                           ITM_Type
+E:/SDK_1.0.3_NUCLEO-F401RE/shared/Drivers/CMSIS/Include/core_cm4.h:1614:41: error: unknown type name 'IRQn_Type'; did you mean 'ITM_Type'?
+ 1614 | __STATIC_INLINE uint32_t NVIC_GetActive(IRQn_Type IRQn)
+      |                                         ^~~~~~~~~
+      |                                         ITM_Type
+E:/SDK_1.0.3_NUCLEO-F401RE/shared/Drivers/CMSIS/Include/core_cm4.h:1629:39: error: unknown type name 'IRQn_Type'; did you mean 'ITM_Type'?
+ 1629 | __STATIC_INLINE void NVIC_SetPriority(IRQn_Type IRQn, uint32_t priority)
+      |                                       ^~~~~~~~~
+      |                                       ITM_Type
+E:/SDK_1.0.3_NUCLEO-F401RE/shared/Drivers/CMSIS/Include/core_cm4.h:1651:43: error: unknown type name 'IRQn_Type'; did you mean 'ITM_Type'?
+ 1651 | __STATIC_INLINE uint32_t NVIC_GetPriority(IRQn_Type IRQn)
+      |                                           ^~~~~~~~~
+      |                                           ITM_Type
+E:/SDK_1.0.3_NUCLEO-F401RE/shared/Drivers/CMSIS/Include/core_cm4.h: In function 'SysTick_Config':
+E:/SDK_1.0.3_NUCLEO-F401RE/shared/Drivers/CMSIS/Include/core_cm4.h:1765:3: warning: implicit declaration of function 'NVIC_SetPriority'; did you mean 'NVIC_DecodePriority'? [-Wimplicit-function-declaration]
+ 1765 |   NVIC_SetPriority (SysTick_IRQn, (1UL << __NVIC_PRIO_BITS) - 1UL); /* set Priority for Systick Interrupt */
+      |   ^~~~~~~~~~~~~~~~
+      |   NVIC_DecodePriority
+E:/SDK_1.0.3_NUCLEO-F401RE/shared/Drivers/CMSIS/Include/core_cm4.h:1765:21: error: 'SysTick_IRQn' undeclared (first use in this function); did you mean 'SysTick_Type'?
+ 1765 |   NVIC_SetPriority (SysTick_IRQn, (1UL << __NVIC_PRIO_BITS) - 1UL); /* set Priority for Systick Interrupt */
+      |                     ^~~~~~~~~~~~
+      |                     SysTick_Type
+E:/SDK_1.0.3_NUCLEO-F401RE/shared/Drivers/CMSIS/Include/core_cm4.h:1765:21: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../Src/main.c:20:
+E:/SDK_1.0.3_NUCLEO-F401RE/shared/Drivers/STM32F401RE_StdPeriph_Driver/inc/stm32f4xx.h: At top level:
+E:/SDK_1.0.3_NUCLEO-F401RE/shared/Drivers/STM32F401RE_StdPeriph_Driver/inc/stm32f4xx.h:16:12: fatal error: stm32f401xe.h: No such file or directory
+   16 |   #include "stm32f401xe.h"
+      |            ^~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+
+16:53:15 Build Failed. 12 errors, 1 warnings. (took 1s.387ms)
+

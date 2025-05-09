@@ -1,0 +1,17 @@
+19:42:44 **** Incremental Build of configuration Debug for project nhom1_day7 ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/b3.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"E:/SDK_1.0.3_NUCLEO-F401RE/shared/Drivers/CMSIS/Include" -I"E:/SDK_1.0.3_NUCLEO-F401RE/shared/Drivers/STM32F401RE_StdPeriph_Driver/inc" -I"E:/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/button" -I"E:/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/buzzer" -I"E:/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/led" -I"E:/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/rtos" -I"E:/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/sensor" -I"E:/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/serial" -I"E:/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/ucglib" -I"E:/SDK_1.0.3_NUCLEO-F401RE/shared/Utilities" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/b3.d" -MT"Src/b3.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/b3.o"
+arm-none-eabi-gcc -o "nhom1_day7.elf" @"objects.list"  -lLibraries -mcpu=cortex-m4 -T"E:\STM32CubeIDE\ttcs_nhom1\nhom1_day7\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="nhom1_day7.map" -Wl,--gc-sections -static -L"E:\SDK_1.0.3_NUCLEO-F401RE\lib_stm" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: nhom1_day7.elf
+ 
+arm-none-eabi-size   nhom1_day7.elf 
+arm-none-eabi-objdump -h -S  nhom1_day7.elf  > "nhom1_day7.list"
+   text	   data	    bss	    dec	    hex	filename
+   1908	     28	   1564	   3500	    dac	nhom1_day7.elf
+arm-none-eabi-objcopy  -O binary  nhom1_day7.elf  "nhom1_day7.bin"
+Finished building: default.size.stdout
+ 
+Finished building: nhom1_day7.list
+Finished building: nhom1_day7.bin
+ 
+ 

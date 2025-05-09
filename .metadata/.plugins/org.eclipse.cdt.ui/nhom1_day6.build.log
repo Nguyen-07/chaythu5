@@ -1,0 +1,7 @@
+14:23:26 **** Clean-only build of configuration Debug for project nhom1_day6 ****
+make -j12 clean 
+rm -rf  default.size.stdout  nhom1_day6.list  nhom1_day6.elf  ./Startup/startup_stm32f401retx.o  ./Src/b2.o ./Src/syscalls.o ./Src/sysmem.o  ./Startup/startup_stm32f401retx.d  ./Src/b2.d ./Src/syscalls.d ./Src/sysmem.d  nhom1_day6.bin  nhom1_day6.elf
+ 
+
+14:23:27 Build Finished. 0 errors, 0 warnings. (took 363ms)
+
